@@ -62,9 +62,9 @@ public class CloudStreamKafkaApplicationTests {
 		tweet.setMessage("I love Scala");
 		//when
 		kafkaTweetProducer.publishTweets(tweet);
-		List<String> tweets = kafkaUnitServer.readAllMessages("spring-cloud-stream");
 		//then
-		System.out.println("There are " + tweets.size() + " Tweets ");
+		List<String> messages = kafkaUnitServer.readMessages("spring-cloud-stream", 1);
+		//assertEquals(1, messages.size());
 	}
 
 	@Test
