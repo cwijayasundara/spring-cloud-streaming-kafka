@@ -23,7 +23,7 @@ public class TweetController {
 
         System.out.println("Inside TweetController.tweets..");
 
-        for (int count=1; count<1000;count++) {
+        for (int count=1; count<10;count++) {
             Tweet tweet = new Tweet();
             tweet.setTweetId(count);
             tweet.setUser("Chaminda");
