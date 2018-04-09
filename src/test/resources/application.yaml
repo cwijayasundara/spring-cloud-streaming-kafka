@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        tweet-in:
+          destination: tweet-in
+          contentType: application/json
+        tweet-out:
+          destination: spring-cloud-stream
+          contentType: application/json
